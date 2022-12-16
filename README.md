@@ -1,4 +1,4 @@
-# LynchTray
+# LunchTray
 ## Welcome to Project: Lunch Tray!
 
 <p>As you're probably aware, navigation is a fundamental part of Android development. Whether you're using an app to browse recipes, find directions to your favorite restaurant, or most importantly, order food, chances are that you're navigating multiple screens of content. In this project, you'll leverage the skills you learned in Unit 3 to build out a lunch ordering app called Lunch Tray, implementing a view model, data binding, and navigation between screens.
