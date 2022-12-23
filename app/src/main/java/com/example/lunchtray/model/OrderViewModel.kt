@@ -21,8 +21,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.lunchtray.data.DataSource
-import com.example.lunchtray.data.DataSource.menuItems
-import java.text.NumberFormat
+mport java.text.NumberFormat
 
 class OrderViewModel : ViewModel() {
 
@@ -75,6 +74,7 @@ class OrderViewModel : ViewModel() {
 
         val x = previousEntreePrice
         if (_entree.value != null) {
+            Log.d("Entree value-----------------", "${_entree.value}")
             previousEntreePrice = _entree.value!!.price
         }
 

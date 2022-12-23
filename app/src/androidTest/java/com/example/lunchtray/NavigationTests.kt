@@ -80,7 +80,7 @@ class NavigationTests : BaseTest() {
         // Click the cancel button
         onView(withId(R.id.cancel_button)).perform(click())
         // Check that the destination is correct
-        assertEquals(navController.currentDestination?.id, R.id.startOrder)
+        assertEquals(navController.currentDestination?.id, R.id.startOrderFragment)
     }
 
     /**
@@ -123,7 +123,7 @@ class NavigationTests : BaseTest() {
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
         onView(withId(R.id.cancel_button)).perform(click())
-        assertEquals(navController.currentDestination?.id, R.id.startOrder)
+        assertEquals(navController.currentDestination?.id, R.id.startOrderFragment)
     }
 
     /**
@@ -142,6 +142,7 @@ class NavigationTests : BaseTest() {
         }
         onView(withId(R.id.next_button)).perform(click())
         assertEquals(navController.currentDestination?.id, R.id.accompanimentMenuFragment)
+
     }
 
     /**
@@ -160,7 +161,7 @@ class NavigationTests : BaseTest() {
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
         onView(withId(R.id.cancel_button)).perform(click())
-        assertEquals(navController.currentDestination?.id, R.id.startOrder)
+        assertEquals(navController.currentDestination?.id, R.id.startOrderFragment)
     }
 
     /**
@@ -197,7 +198,7 @@ class NavigationTests : BaseTest() {
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
         onView(withId(R.id.cancel_button)).perform(click())
-        assertEquals(navController.currentDestination?.id, R.id.startOrder)
+        assertEquals(navController.currentDestination?.id, R.id.startOrderFragment)
     }
 
     /**
@@ -215,6 +216,6 @@ class NavigationTests : BaseTest() {
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
         onView(withId(R.id.submit_button)).perform(click())
-        assertEquals(navController.currentDestination?.id, R.id.startOrder)
+        assertEquals(navController.currentDestination?.id, R.id.startOrderFragment)
     }
 }
