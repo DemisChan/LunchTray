@@ -55,8 +55,8 @@
                     android:id="@+id/bread"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.accompaniment.equals(viewModel.menuItems["bread"].name)}'
-                    android:onClick='@{() -> viewModel.setAccompaniment(viewModel.menuItems["bread"].name)}'
+                    android:checked='@{viewModel.accompaniment.name.equals(viewModel.menuItems["bread"].name)}'
+                    android:onClick='@{() -> viewModel.setAccompaniment("bread")}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["bread"].name}'
                     tools:text="Accompaniment 1" />
@@ -84,8 +84,8 @@
                     android:id="@+id/berries"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.accompaniment.equals(viewModel.menuItems["berries"].name)}'
-                    android:onClick='@{() -> viewModel.setAccompaniment(viewModel.menuItems["berries"].name)}'
+                    android:checked='@{viewModel.accompaniment.name.equals(viewModel.menuItems["berries"].name)}'
+                    android:onClick='@{() -> viewModel.setAccompaniment("berries")}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["berries"].name}'
                     tools:text="Accompaniment 2" />
@@ -115,8 +115,8 @@
                     android:id="@+id/pickles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.accompaniment.equals(viewModel.menuItems["pickles"].name)}'
-                    android:onClick='@{() -> viewModel.setAccompaniment(viewModel.menuItems["pickles"].name)}'
+                    android:checked='@{viewModel.accompaniment.name.equals(viewModel.menuItems["pickles"].name)}'
+                    android:onClick='@{() -> viewModel.setAccompaniment("pickles")}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["pickles"].name}'
                     tools:text="Accompaniment 3" />

@@ -55,8 +55,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:checked='@{viewModel.side.equals(viewModel.menuItems["salad"].name)}'
-                    android:onClick='@{() -> viewModel.setSide(viewModel.menuItems["salad"].name)}'
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["salad"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("salad")}'
                     android:text='@{viewModel.menuItems["salad"].name}'
                     tools:text="Side 1" />
 
@@ -86,8 +86,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:checked='@{viewModel.side.equals(viewModel.menuItems["soup"].name)}'
-                    android:onClick='@{() -> viewModel.setSide(viewModel.menuItems["soup"].name)}'
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["soup"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("soup")}'
                     android:text='@{viewModel.menuItems["soup"].name}'
                     tools:text="Side 2" />
 
@@ -118,8 +118,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:checked='@{viewModel.side.equals(viewModel.menuItems["potatoes"].name)}'
-                    android:onClick='@{() -> viewModel.setSide(viewModel.menuItems["potatoes"].name)}'
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["potatoes"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("potatoes")}'
                     android:text='@{viewModel.menuItems["potatoes"].name}'
                     tools:text="Side 3" />
 
@@ -149,8 +149,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:checked='@{viewModel.side.equals(viewModel.menuItems["rice"].name)}'
-                    android:onClick='@{() -> viewModel.setSide(viewModel.menuItems["rice"].name)}'
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["rice"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("rice")}'
                     android:text='@{viewModel.menuItems["rice"].name}'
                     tools:text="Side 4" />
 

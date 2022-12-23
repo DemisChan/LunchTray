@@ -53,8 +53,8 @@
                     android:id="@+id/cauliflower"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.entree.equals(viewModel.menuItems["cauliflower"].name)}'
-                    android:onClick='@{() -> viewModel.setEntree(viewModel.menuItems["cauliflower"].name)}'
+                    android:checked='@{viewModel.entree.name.equals(viewModel.menuItems["cauliflower"].name)}'
+                    android:onClick='@{() -> viewModel.setEntree("cauliflower")}'
                     android:text='@{viewModel.menuItems["cauliflower"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Entree 1" />
@@ -84,8 +84,8 @@
                     android:id="@+id/chili"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.entree.equals(viewModel.menuItems["chili"].name)}'
-                    android:onClick='@{() -> viewModel.setEntree(viewModel.menuItems["chili"].name)}'
+                    android:checked='@{viewModel.entree.name.equals(viewModel.menuItems["chili"].name)}'
+                    android:onClick='@{() -> viewModel.setEntree("chili")}'
                     android:text='@{viewModel.menuItems["chili"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Entree 2" />
@@ -115,8 +115,8 @@
                     android:id="@+id/pasta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.entree.equals(viewModel.menuItems["pasta"].name)}'
-                    android:onClick='@{() -> viewModel.setEntree(viewModel.menuItems["pasta"].name)}'
+                    android:checked='@{viewModel.entree.name.equals(viewModel.menuItems["pasta"].name)}'
+                    android:onClick='@{() -> viewModel.setEntree("pasta")}'
                     android:text='@{viewModel.menuItems["pasta"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Entree 3" />
@@ -146,8 +146,8 @@
                     android:id="@+id/skillet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked='@{viewModel.entree.equals(viewModel.menuItems["skillet"].name)}'
-                    android:onClick='@{() -> viewModel.setEntree(viewModel.menuItems["skillet"].name)}'
+                    android:checked='@{viewModel.entree.name.equals(viewModel.menuItems["skillet"].name)}'
+                    android:onClick='@{() -> viewModel.setEntree("skillet")}'
                     android:text='@{viewModel.menuItems["skillet"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Entree 4" />

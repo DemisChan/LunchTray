@@ -21,7 +21,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.lunchtray.data.DataSource
-mport java.text.NumberFormat
+import java.text.NumberFormat
 
 class OrderViewModel : ViewModel() {
 
@@ -72,15 +72,14 @@ class OrderViewModel : ViewModel() {
      */
     fun setEntree(entree: String) {
 
-        val x = previousEntreePrice
         if (_entree.value != null) {
-            Log.d("Entree value-----------------", "${_entree.value}")
+            Log.d("Entree value-----------------", "${entree}")
             previousEntreePrice = _entree.value!!.price
         }
 
 
         if (_subtotal.value != null) {
-            _subtotal.value = _subtotal.value?.minus(x)
+            _subtotal.value = _subtotal.value!! - previousEntreePrice
         }
 
         _entree.value = menuItems[entree]
@@ -92,13 +91,12 @@ class OrderViewModel : ViewModel() {
      */
     fun setSide(side: String) {
 
-        val x = previousSidePrice
         if (_side.value != null) {
             previousSidePrice = _side.value!!.price
         }
 
         if (_subtotal.value != null) {
-            _subtotal.value = _subtotal.value?.minus(x)
+            _subtotal.value = _subtotal.value!! -previousSidePrice
         }
 
         _side.value = menuItems[side]
@@ -110,13 +108,12 @@ class OrderViewModel : ViewModel() {
      */
     fun setAccompaniment(accompaniment: String) {
 
-        val x = previousAccompanimentPrice
         if (_accompaniment.value != null) {
             previousAccompanimentPrice = _accompaniment.value!!.price
         }
 
         if (_subtotal.value != null) {
-            _subtotal.value = _subtotal.value!! - x
+            _subtotal.value = _subtotal.value!! - previousAccompanimentPrice
         }
 
         _accompaniment.value = menuItems[accompaniment]
@@ -153,6 +150,12 @@ class OrderViewModel : ViewModel() {
         previousEntreePrice = 0.0
         previousSidePrice = 0.0
         previousAccompanimentPrice = 0.0
+        _entree.value = null
+        _side.value = null
+        _accompaniment.value = null
+        _subtotal.value = 0.0
+        _total.value = 0.0
+        _tax.value = 0.0
 
     }
 }
