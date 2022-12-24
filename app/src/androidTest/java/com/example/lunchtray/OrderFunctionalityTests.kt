@@ -43,6 +43,7 @@ class OrderFunctionalityTests : BaseTest() {
      */
     @Test
     fun `radio_buttons_update_entree_menu_subtotal`() {
+        Thread.sleep(2)
         // Launch the entree menu fragment
         launchFragmentInContainer<EntreeMenuFragment>(themeResId = R.style.Theme_LunchTray)
 
@@ -107,8 +108,10 @@ class OrderFunctionalityTests : BaseTest() {
      */
     @Test
     fun `radio_buttons_update_accompaniment_menu_subtotal`() {
+        Thread.sleep(2)
         // Launch the side menu fragment
         launchFragmentInContainer<AccompanimentMenuFragment>(themeResId = R.style.Theme_LunchTray)
+
 
         // Select the salad item
         onView(withId(R.id.bread)).perform(click())
